@@ -1,4 +1,4 @@
-# Тнє ТυƒααηBσт [🇮🇳]
+# Тнє ТυƒααηBσт 🇮🇳
 <b>Making of this Bot made possible with the help of all Userbot available in Telegram. 
      Full respect to their respective owners.</b>
 </p>
