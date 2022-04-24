@@ -39,7 +39,7 @@ Get [Necessary Vars](#required-values) Before Installation.
 
 ## Repl (String Session) 
 
-- First go to [REPLIT](https://replit.com/@34jh/TOOFAN-USERBOT#main.py).
+- First go to [REPLIT](https://replit.com/@akhilsi/TUFAANBOT#main.py).
 - Click on run.
 - After that it starts putting some variables.
 - Now enter required values.
