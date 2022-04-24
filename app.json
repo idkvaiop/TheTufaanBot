@@ -24,11 +24,11 @@
    "required": false
   },
   "APP_ID": {
-   "description": "Get this value from my.telegram.org! Please do not steal",
+   "description": "Get this value from my.telegram.org! Putting other's value lead to ban",
    "value": ""
   },
   "API_HASH": {
-   "description": "Get this value from my.telegram.org! Please do not steal",
+   "description": "Get this value from my.telegram.org! Putting other's value lead to ban",
    "value": ""
   },
   "STRING_SESSION": {
