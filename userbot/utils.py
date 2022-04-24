@@ -1,11 +1,11 @@
 import sys
 import math
-from telebot import bot
+from userbot import bot
 from telethon import events
 from pathlib import Path
-from telebot.telebotConfig import Var, Config
-from telebot import LOAD_PLUG
-from telebot import CMD_LIST
+from userbot.exampleconfig import Var, Config
+from userbot import LOAD_PLUG
+from userbot import CMD_LIST
 import re
 import logging
 import inspect
@@ -396,8 +396,8 @@ def start_mybot(shortname):
         import sys
         from pathlib import Path
 
-        path = Path(f"telebot/plugins/mybot/{shortname}.py")
-        name = "telebot.plugins.mybot.{}".format(shortname)
+        path = Path(f"userbot/plugins/mybot/{shortname}.py")
+        name = "userbot.plugins.mybot.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
@@ -408,13 +408,13 @@ def start_mybot(shortname):
         import sys
         from pathlib import Path
 
-        path = Path(f"telebot/plugins/mybot/{shortname}.py")
-        name = "telebot.plugins.mybot.{}".format(shortname)
+        path = Path(f"userbot/plugins/mybot/{shortname}.py")
+        name = "userbot.plugins.mybot.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.tgbot = bot.tgbot
         spec.loader.exec_module(mod)
-        sys.modules["telebot.plugins.mybot" + shortname] = mod
+        sys.modules["userbot.plugins.mybot" + shortname] = mod
         print("TGBot Has imported " + shortname)
 
 
@@ -426,8 +426,8 @@ def load_pmbot(shortname):
         import sys
         from pathlib import Path
 
-        path = Path(f"telebot/plugins/mybot/pmbot/{shortname}.py")
-        name = "telebot.plugins.mybot.pmbot.{}".format(shortname)
+        path = Path(f"userbot/plugins/mybot/pmbot/{shortname}.py")
+        name = "userbotbot.plugins.mybot.pmbot.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
@@ -438,11 +438,11 @@ def load_pmbot(shortname):
         import sys
         from pathlib import Path
 
-        path = Path(f"telebot/plugins/mybot/pmbot/{shortname}.py")
-        name = "telebot.plugins.mybot.pmbot.{}".format(shortname)
+        path = Path(f"userbot/plugins/mybot/pmbot/{shortname}.py")
+        name = "userbot.plugins.mybot.pmbot.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.tgbot = bot.tgbot
         spec.loader.exec_module(mod)
-        sys.modules["telebot.plugins.mybot.pmbot." + shortname] = mod
+        sys.modules["userbot.plugins.mybot.pmbot." + shortname] = mod
         print("PMBot Has imported " + shortname)
