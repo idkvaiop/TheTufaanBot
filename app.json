@@ -20,7 +20,7 @@
   },
   "TEMP_DOWNLOAD_DIRECTORY": {
    "description": "Where downloaded files will go.",
-   "value": "./telebot/DOWNLOADS/",
+   "value": "./tufaan/DOWNLOADS/",
    "required": false
   },
   "APP_ID": {
@@ -32,12 +32,12 @@
    "value": ""
   },
   "STRING_SESSION": {
-   "description": "Get this value by running python3 telesetup.py locally or https://telebot-sessionstring-generator.xditya.repl.run online.",
+   "description": "Get this value by running https://replit.com/@akhilsi/TUFAANBOT#main.py.",
    "value": ""
   },  
   "CUSTOM_PMPERMIT": {
    "description": "The message that appears when someone PM's you. Leave it as such for default message.",
-   "value": "Do not spam here, else you will be blocked automatically."
+   "value": "Do not spam my Inbox, I am currently unavailable.. leave your message I will think about it to approve."
   
   },
    "CMD_HNDLR": {
