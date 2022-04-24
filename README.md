@@ -50,7 +50,7 @@ Get [Necessary Vars](#required-values) Before Installation.
 
 ### For support, help and any query regarding your TufaanBot, do join our official group and channel. 
 
-- <a href="https://t.me/TufaanBot_SupportChat"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
+- <a href="https://t.me/TufaanBot_Support"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
 - <a href="https://t.me/TufaanBot_Updates"><img src="https://img.shields.io/badge/Join-Telegram%20Channel-red.svg?logo=Telegram"></a>
 
 ## Note 
