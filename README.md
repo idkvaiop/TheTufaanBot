@@ -106,8 +106,6 @@ ban due to the bot... Note that!
 
   - Before Deployment, Pls make sure that you have enabled two step verification.
   - Never Share your String Session, avoid sharing your String Session even someone is saying they are from Telegram. 
-  - Fork at your own risk, if you do any mistake that result into account ban then TufaanBot will not be responsible anymore.
-    Watch tutorials if you are new.
- - It's your concern if your account gets banned... If you keep spamming and spamming and got reported again and again..
-    And in last your account gets banned. 
+  - Fork at your own risk, if you do any mistake that result into account ban then TufaanBot will not be responsible anymore. Watch tutorials if you are new.
+  - It's your concern if your account gets banned... If you keep spamming and spamming and got reported again and again.. And in last your account gets banned. 
 
