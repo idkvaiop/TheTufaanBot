@@ -1,11 +1,11 @@
 {
- "name": "TeleBot - UserBot",
- "description": "An advanced Telethon Userbot, from @TeleBotSupport",
- "logo": "https://telegra.ph/file/0b1d5cb8deeec7a506154.jpg",
+ "name": "Тнє ТυƒααηBσт 🇮🇳",
+ "description": "A fully mix version of all Userbot, inspired and motivated by all the Userbot in telegram. Maintained by @AkHiL_SI.",
+ "logo": "https://te.legra.ph/file/366d26c78e57219e69e73.jpg",
  "keywords": [
   "telegram",
   "userbot",
-  "TeleBot",
+  "TufaanBot",
   "modular",
   "productivity"
  ],
@@ -49,13 +49,7 @@
    "description": "Used to invoke sudo commands, leave blank for default",
    "value": "",
    "required": false
-    
-    },
-  "HEROKU_API_KEY": {
-   "description": "Go to https://dashboard.heroku.com/account, scroll down and press Reveal API. Required for updating your bot in future.",
-   "value": "",
-   "required": true
-  
+     
   },
   "SUDO_USERS": {
    "description": "Users whom you want to give full access to your bot. (Don't allow unknown people)",
@@ -66,7 +60,12 @@
    "description": "A group/channel where you want to keep your logs of the bot. Leave this as it is.",
    "value": "",
    "required": false
-  },
+    },
+  "HEROKU_API_KEY": {
+   "description": "Go to https://dashboard.heroku.com/account, scroll down and press Reveal API. Required for updating your bot in future.",
+   "value": "",
+   "required": true
+   },
   "HEROKU_APP_NAME": {
    "description": "The Value of App Name you filled in right on top.Required for updater to work.",
    "value": "",
