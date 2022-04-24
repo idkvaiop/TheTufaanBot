@@ -1,6 +1,6 @@
 #!/bin/bash
 #    The TufaanBot
-#    Copyright (C) 2020 AKHIL-SI
+#    Copyright (C) 2022 AKHIL-SI
 
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as published by
