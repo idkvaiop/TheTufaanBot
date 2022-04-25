@@ -1,7 +1,3 @@
-# Made For DARK COBRA and TELEBOT...
-# Made by team cobra with @xditya
-# Retrieves the name history and the username history of the replied user..
-
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
@@ -45,9 +41,9 @@ async def _(event):
             await event.edit("User never changed his Username...")
         else:
             await event.delete()
-            await telebot.send_message(event.chat_id, response2.message)
+            await tufaan.send_message(event.chat_id, response2.message)
 
-            await telebot.send_message(event.chat_id, response3.message)
+            await tufaan.send_message(event.chat_id, response3.message)
 
 
 CMD_HELP.update(
