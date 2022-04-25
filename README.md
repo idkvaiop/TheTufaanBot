@@ -7,11 +7,11 @@
   
 
 ------
-[![Stars](https://img.shields.io/github/stars/AKHIL-SI/TufaanBot-OP?style=flat-square&color=yellow)](https://github.com/AKHIL-SI/TufaanBot-OP/stargazers)
-[![Forks](https://img.shields.io/github/forks/AKHIL-SI/TufaanBot-OP?style=flat-square&color=orange)](https://github.com/AKHIL-SI/TufaanBot-OP/fork)
-[![Size](https://img.shields.io/github/repo-size/AKHIL-SI/TufaanBot-OP?style=flat-square&color=green)](https://github.com/AKHIL-SI/TufaanBot-OP/size)   
+[![Stars](https://img.shields.io/github/stars/AKHIL-SI/TheTufaanBot?style=flat-square&color=yellow)](https://github.com/AKHIL-SI/TheTufaanBot/stargazers)
+[![Forks](https://img.shields.io/github/forks/AKHIL-SI/TheTufaanBot?style=flat-square&color=orange)](https://github.com/AKHIL-SI/TheTufaanBot/fork)
+[![Size](https://img.shields.io/github/repo-size/AKHIL-SI/TheTufaanBot?style=flat-square&color=green)](https://github.com/AKHIL-SI/TheTufaanBot/size)   
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com)
-[![License](https://img.shields.io/badge/License-AGPL-blue)](https://github.com/AKHIL-SI/TufaanBot-OP/blob/main/LICENSE)   
+[![License](https://img.shields.io/badge/License-AGPL-blue)](https://github.com/AKHIL-SI/TheTufaanBot/blob/main/LICENSE)   
 [![Contact Me](https://img.shields.io/badge/Telegram-Contact%20Me-informational)](https://t.me/AkHiL_SI)
 
 ------
