@@ -3,12 +3,12 @@ Syntax: .invite <User(s)>"""
 
 from telethon import functions
 
-from telebot import CMD_HELP
-from telebot.utils import admin_cmd
+from userbot import CMD_HELP
+from userbot.utils import admin_cmd
 
 
-@telebot.on(admin_cmd(pattern="invite ?(.*)"))
-@telebot.on(sudo_cmd(pattern="invite ?(.*)", allow_sudo=True))
+@userbot.on(admin_cmd(pattern="invite ?(.*)"))
+@userbot.on(sudo_cmd(pattern="invite ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -40,7 +40,7 @@ async def _(event):
                     )
                 except Exception as e:
                     await event.reply(str(e))
-            await eor(event, "TeleBot has invited the user to the chat.")
+            await eor(event, "TufaanBot has invited the user to the chat.")
 
 
 CMD_HELP.update({"invite": ".invite <username>\nUse - Add user to the chat."})
