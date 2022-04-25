@@ -1,4 +1,4 @@
-# TeleBot
+# TufaanBot
 
 # Copyright (C) 2020 Adek Maulana.
 # All rights reserved.
@@ -13,13 +13,13 @@ import os
 import heroku3
 import requests
 
-from telebot import CMD_HELP, CMD_HNDLR
+from userbot import CMD_HELP, CMD_HNDLR
 
 Heroku = heroku3.from_key(Var.HEROKU_API_KEY)
 heroku_api = "https://api.heroku.com"
 
 
-@telebot.on(admin_cmd(pattern=r"(set|get|del) var (.*)", outgoing=True))
+@userbot.on(admin_cmd(pattern=r"(set|get|del) var (.*)", outgoing=True))
 async def variable(var):
     """
     Manage most of ConfigVars setting, set new var, get current var,
@@ -98,8 +98,8 @@ async def variable(var):
             return await toput.edit(f"`{variable}`** doesn't exist**")
 
 
-@telebot.on(admin_cmd(pattern="usage"))
-@telebot.on(sudo_cmd(pattern="usage", allow_sudo=True))
+@userbot.on(admin_cmd(pattern="usage"))
+@userbot.on(sudo_cmd(pattern="usage", allow_sudo=True))
 async def dyno_usage(dyno):
     """
     Get your account Dyno Usage
@@ -146,7 +146,7 @@ async def dyno_usage(dyno):
     AppMinutes = math.floor(AppQuotaUsed % 60)
     await asyncio.sleep(1.5)
     return await dyno.edit(
-        "**⚙️ Dyno Usage ⚙️**:\n\n"
+        "**⚡ Dyno Usage 🔥**:\n\n"
         f" -> `Dyno usage for`  **{Var.HEROKU_APP_NAME}**:\n"
         f"     •  `{AppHours}`**h**  `{AppMinutes}`**m**  "
         f"**|**  [`{AppPercentage}`**%**]"
@@ -157,8 +157,8 @@ async def dyno_usage(dyno):
     )
 
 
-@telebot.on(admin_cmd(pattern="info heroku"))
-@telebot.on(sudo_cmd(pattern="info heroku", allow_sudo=True))
+@userbot.on(admin_cmd(pattern="info heroku"))
+@userbot.on(sudo_cmd(pattern="info heroku", allow_sudo=True))
 async def info(event):
     await borg.send_message(
         event.chat_id,
@@ -181,8 +181,8 @@ def prettyjson(obj, indent=2, maxlinelength=80):
     return indentitems(items, indent, level=0)
 
 
-@telebot.on(admin_cmd(outgoing=True, pattern=r"logs"))
-@telebot.on(sudo_cmd(allow_sudo=True, pattern=r"logs"))
+@userbot.on(admin_cmd(outgoing=True, pattern=r"logs"))
+@userbot.on(sudo_cmd(allow_sudo=True, pattern=r"logs"))
 async def _(givelogs):
     try:
         Heroku = heroku3.from_key(Var.HEROKU_API_KEY)
@@ -193,7 +193,7 @@ async def _(givelogs):
             " Please make sure your Heroku API Key, Your App name are configured correctly in the heroku var !",
         )
     await eor(givelogs, "Downloading Logs..")
-    with open("logs-telebot.txt", "w") as log:
+    with open("logs-tufaanbot.txt", "w") as log:
         log.write(app.get_log())
     ok = app.get_log()
     message = ok
@@ -204,12 +204,12 @@ async def _(givelogs):
         givelogs.chat_id,
         "logs-telebot.txt",
         reply_to=givelogs.id,
-        caption=f"**Heroku** TeleBot Logs.\nPasted [here]({url}) too!",
+        caption=f"**Heroku** TufaanBot Logs.\nPasted [here]({url}) too!",
     )
     await eor(givelogs, "Heroku Logs Incoming!!")
     await asyncio.sleep(5)
     await givelogs.delete()
-    return os.remove("logs-telebot.txt")
+    return os.remove("logs-tufaanbot.txt")
 
 
 CMD_HELP.update(
