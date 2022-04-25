@@ -8,11 +8,11 @@ Available Commands:
 
 import asyncio
 
-from telebot import CMD_HELP
-from telebot.utils import admin_cmd
+from userbot import CMD_HELP
+from userbot.utils import admin_cmd
 
 
-@telebot.on(admin_cmd(pattern=r"(.*)", outgoing=True))
+@userbot.on(admin_cmd(pattern=r"(.*)", outgoing=True))
 async def _(event):
 
     if event.fwd_from:
@@ -30,7 +30,7 @@ async def _(event):
         await event.edit(input_str)
 
         animation_chars = [
-            "`Connecting To Hacked Private Server...`",
+            "`Connecting To MY Private Server...`",
             "`Target Selected.`",
             "`Hacking... 0%\n▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
             "`Hacking... 4%\n█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
