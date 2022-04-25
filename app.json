@@ -57,9 +57,9 @@
    "required": false
   },
   "TUFAANBOT_LOGGER": {
-   "description": "A group/channel where you want to keep your logs of the bot. Leave this as it is.",
+   "description": "A group/channel where you want to keep your logs of the bot. Make a private group and add miss Rose bot then type /id and copy paste here.",
    "value": "",
-   "required": false
+   "required": true
     },
   "HEROKU_API_KEY": {
    "description": "Go to https://dashboard.heroku.com/account, scroll down and press Reveal API. Required for updating your bot in future.",
