@@ -7,7 +7,7 @@ import os
 import sys
 from telethon.sessions import StringSession
 from telethon import TelegramClient
-from telebot.telebotConfig import Var
+from userbot.exampleconfig import Var
 import time
 
 if Var.STRING_SESSION:
@@ -44,7 +44,7 @@ if bool(ENV):
         )
     else:
         basicConfig(
-            format="✘ %(asctime)s ✘ - ⫸ %(name)s ⫷ - ⛝ %(levelname)s ⛝ - ║ %(message)s ║",
+            format="⚡ %(asctime)s ⚡ - ⫸ %(name)s ⫷ - ⛝ %(levelname)s ⛝ - ║ %(message)s ║",
             level=INFO)
     LOGS = getLogger(__name__)
 
