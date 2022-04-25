@@ -1,27 +1,14 @@
-#    TeleBot - UserBot
-#    Copyright (C) 2020 TeleBot
-
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as published by
-#    the Free Software Foundation, either version 3 of the License, or
-#    (at your option) any later version.
-
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
-# Imported by @its_xditya
+# Thanks to DarkCobra
+# keep credit kangers.
+# haters mere lode par.
+# by @AkHiL_SI
 
 from telethon.events import ChatAction
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from telethon.tl.types import MessageEntityMentionName
 
-from telebot import CMD_HELP, bot
-from telebot.utils import admin_cmd
+from userbot import CMD_HELP, bot
+from userbot.utils import admin_cmd
 
 client = bot
 
@@ -66,11 +53,11 @@ async def get_user_from_id(user, event):
     return user_obj
 
 
-@telebot.on(ChatAction)
+@userbot.on(ChatAction)
 async def handler(tele):
     if tele.user_joined or tele.user_added:
         try:
-            from telebot.plugins.sql_helper.gmute_sql import is_gmuted
+            from userbot.plugins.sql_helper.gmute_sql import is_gmuted
 
             guser = await tele.get_user()
             gmuted = is_gmuted(guser.id)
@@ -102,11 +89,11 @@ async def gspider(rk):
     sender = await lazy.get_sender()
     me = await lazy.client.get_me()
     if not sender.id == me.id:
-        rkp = await lazy.reply("`processing...`")
+        rkp = await lazy.reply("`BHAG JA BHOSDIWALE... GBANNING...`")
     else:
-        rkp = await lazy.edit("`processing...`")
+        rkp = await lazy.edit("`BHAG JA BHOSDIWALE... GBANNING...`")
     me = await rk.client.get_me()
-    await rkp.edit(f"**Global Banning User!!**")
+    await rkp.edit(f"**GBANNING.....**")
     my_mention = "[{}](tg://user?id={})".format(me.first_name, me.id)
     f"@{me.username}" if me.username else my_mention
     await rk.get_chat()
@@ -126,8 +113,8 @@ async def gspider(rk):
     except BaseException:
         return await rkp.edit("**Error! Unknown user.**")
     if user:
-        if user.id == 719195224:
-            return await rkp.edit("**Error! cant gban this user.**")
+        if user.id == 2102783671:
+            return await rkp.edit("**NASHE ME HAI KYA LAWDE ? WHY SHOULD I GBAN MY CREATOR ?**")
         try:
             from telebot.plugins.sql_helper.gmute_sql import gmute
         except BaseException:
@@ -190,8 +177,8 @@ async def gspider(rk):
     except BaseException:
         return await rkp.edit(f"**Error! Unknown user.**")
     if user:
-        if user.id == 719195224:
-            return await rkp.edit(f"**Error! cant ungban this user.**")
+        if user.id == 2102783671:
+            return await rkp.edit(f"**JA NA LAWDE 😒😂....**")
         try:
             from telebot.plugins.sql_helper.gmute_sql import ungmute
         except BaseException:
