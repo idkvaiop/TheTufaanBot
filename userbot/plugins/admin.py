@@ -324,8 +324,8 @@ async def get_admin(show):
     await show.edit(mentions, parse_mode="html")
 
 
-@telebot.on(admin_cmd(outgoing=True, pattern="pin(?: |$)(.*)"))
-@telebot.on(sudo_cmd(outgoing=True, pattern="pin(?: |$)(.*)"))
+@userbot.on(admin_cmd(outgoing=True, pattern="pin(?: |$)(.*)"))
+@userbot.on(sudo_cmd(outgoing=True, pattern="pin(?: |$)(.*)"))
 @errors_handler
 async def pin(msg):
     """ For .pin command, pins the replied/tagged message on the top the chat. """
