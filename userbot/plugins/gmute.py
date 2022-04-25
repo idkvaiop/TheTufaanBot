@@ -1,12 +1,12 @@
 import asyncio
 
-from telebot import CMD_HELP
-from telebot.plugins.sql_helper.mute_sql import is_muted, mute, unmute
-from telebot.utils import admin_cmd
+from userbot import CMD_HELP
+from userbot.plugins.sql_helper.mute_sql import is_muted, mute, unmute
+from userbot.utils import admin_cmd
 
 
-@telebot.on(admin_cmd(outgoing=True, pattern=r"gmute ?(\d+)?"))
-@telebot.on(sudo_cmd(allow_sudo=True, pattern=r"gmute ?(\d+)?"))
+@userbot.on(admin_cmd(outgoing=True, pattern=r"gmute ?(\d+)?"))
+@userbot.on(sudo_cmd(allow_sudo=True, pattern=r"gmute ?(\d+)?"))
 async def startgmute(event):
     private = False
     if event.fwd_from:
@@ -35,7 +35,7 @@ async def startgmute(event):
     except Exception as e:
         await eor(event, "Error occured!\nError is " + str(e))
     else:
-        await eor(event, "Silence now. **Successfully gmuted that person**")
+        await eor(event, "Chup Madharchod Bilkul Chup 🤫. **Successfully gmuted that person**")
 
 
 @telebot.on(admin_cmd(outgoing=True, pattern=r"ungmute ?(\d+)?"))
