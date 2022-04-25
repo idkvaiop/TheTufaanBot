@@ -6,11 +6,11 @@
 
 import asyncio
 
-from telebot import CMD_HELP
-from telebot.utils import admin_cmd
+from userbot import CMD_HELP
+from userbot.utils import admin_cmd
 
 
-@telebot.on(admin_cmd(pattern="(.*)"))
+@userbot.on(admin_cmd(pattern="(.*)"))
 async def _(event):
     if event.fwd_from:
         return
