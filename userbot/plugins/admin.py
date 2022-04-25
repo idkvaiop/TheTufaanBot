@@ -116,8 +116,8 @@ async def set_group_photo(gpic):
             x = await gpic.eor(x, PP_ERROR)
 
 
-@telebot.on(admin_cmd("promote(?: |$)(.*)"))
-@telebot.on(sudo_cmd(pattern="promote(?: |$)(.*)", allow_sudo=True))
+@userbot.on(admin_cmd("promote(?: |$)(.*)"))
+@userbot.on(sudo_cmd(pattern="promote(?: |$)(.*)", allow_sudo=True))
 @errors_handler
 async def promote(promt):
     chat = await promt.get_chat()
