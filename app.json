@@ -71,12 +71,12 @@
    "value": "",
    "required": false
   },
-  "TG_BOTFATHER_TOKEN": {
+  "TG_BOT_TOKEN_BF_HER": {
    "description": "Needed for inline buttons maker. Make a bot at @BotFather and get the token of your bot.",
    "value": "",
    "required": true
   },
-  "TG_BOTFATHER_USERNAME": {
+  "TG_BOT_USER_NAME_BF_HER": {
    "description": "Needed for inline buttons maker. Make a bot at @BotFather and get the username of your bot. Needed for .help to work.",
    "value": "",
    "required": true
