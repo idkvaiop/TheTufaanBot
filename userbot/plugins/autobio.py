@@ -1,6 +1,7 @@
-# AutoBio plugin for TeleBot
+# AutoBio plugin for TufaanBot
 # Using this might lead to ban of your account, use at your own risk.
 # Re-Written by @its_xditya
+# Now ported in TufaanBot by @AkHiL_SI
 
 import asyncio
 import time
@@ -8,13 +9,13 @@ import time
 from telethon.errors import FloodWaitError
 from telethon.tl import functions
 
-from telebot import CMD_HELP
-from telebot.utils import admin_cmd
+from userbot import CMD_HELP
+from userbot.utils import admin_cmd
 
 DEL_TIME_OUT = 60
 
 
-@telebot.on(admin_cmd(pattern="autobio"))  # pylint:disable=E0602
+@userbot.on(admin_cmd(pattern="autobio"))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
