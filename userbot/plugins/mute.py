@@ -1,12 +1,12 @@
 import asyncio
 
-from telebot import CMD_HELP
-from telebot.plugins.sql_helper.mute_sql import is_muted, mute, unmute
-from telebot.utils import admin_cmd
+from userbot import CMD_HELP
+from userbot.plugins.sql_helper.mute_sql import is_muted, mute, unmute
+from userbot.utils import admin_cmd
 
 
-@telebot.on(admin_cmd(outgoing=True, pattern=r"mute ?(\d+)?"))
-@telebot.on(sudo_cmd(allow_sudo=True, pattern=r"mute ?(\d+)?"))
+@userbot.on(admin_cmd(outgoing=True, pattern=r"mute ?(\d+)?"))
+@userbot.on(sudo_cmd(allow_sudo=True, pattern=r"mute ?(\d+)?"))
 async def startmute(event):
     private = False
     if event.fwd_from:
@@ -49,7 +49,7 @@ async def startmute(event):
     except Exception as e:
         await eor(event, "Error occured!\nError is " + str(e))
     else:
-        await eor(event, "Successfully muted that person")
+        await eor(event, "TU CHUP HI RAHA KAR LODE")
 
 
 @telebot.on(admin_cmd(outgoing=True, pattern=r"unmute ?(\d+)?"))
@@ -82,10 +82,10 @@ async def endmute(event):
     except Exception as e:
         await eor(event, "Error occured!\nError is " + str(e))
     else:
-        await eor(event, "Successfully unmuted that person")
+        await eor(event, "AAGYA SWAD ?¿")
 
 
-@telebot.on(admin_cmd(incoming=True))
+@userbot.on(admin_cmd(incoming=True))
 async def watcher(event):
     if is_muted(event.sender_id, event.chat_id):
         await event.delete()
