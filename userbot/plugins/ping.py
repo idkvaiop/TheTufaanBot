@@ -1,12 +1,9 @@
-# special thanks to Sur_vivor
-# Re-written for TeleBot by @its_xditya
-
 import time
 from datetime import datetime
 
-from telebot import CMD_HELP
-from telebot.__init__ import StartTime
-from telebot.plugins import OWNER_ID, TELE_NAME
+from userbot import CMD_HELP
+from userbot.__init__ import StartTime
+from userbot.plugins import OWNER_ID, TELE_NAME
 
 
 def get_readable_time(seconds: int) -> str:
@@ -46,13 +43,13 @@ async def _(event):
     if event.fwd_from:
         return
     start = datetime.now()
-    x = await eor(event, "⛝ Pong! ⛝")
+    x = await eor(event, "• 𝑷𝑶𝑵𝑮  ﮩﮩ٨")
     end = datetime.now()
     ms = (end - start).microseconds / 1000
     uptime = get_readable_time((time.time() - StartTime))
     await x.edit(
-        f"⪼ **Ping speed** : `{ms}`\n⪼ **Uptime** : `{uptime}`\n⪼ **Owner** : [{TELE_NAME}](tg://user?id={OWNER_ID})"
+        f"😈 **Ping speed** : `{ms}`\n🔥 **Uptime** : `{uptime}`\n⪼ **Master** : [{TUFAAN_NAME}](tg://user?id={OWNER_ID})"
     )
 
 
-CMD_HELP.update({"ping": ".ping\nUse - See the ping stats and uptime of userbot."})
+CMD_HELP.update({"ping": ".ping\nUse - See the ping stats and uptime of tufaan."})
