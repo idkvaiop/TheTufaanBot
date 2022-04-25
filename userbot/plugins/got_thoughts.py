@@ -10,11 +10,11 @@ command .gott
 import asyncio
 import random
 
-from telebot import CMD_HELP
-from telebot.utils import admin_cmd
+from userbot import CMD_HELP
+from userbot.utils import admin_cmd
 
 
-@telebot.on(admin_cmd(pattern="gott", outgoing=True))
+@userbot.on(admin_cmd(pattern="gott", outgoing=True))
 async def _(event):
 
     if event.fwd_from:
