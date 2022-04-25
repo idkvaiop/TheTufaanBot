@@ -1,5 +1,5 @@
-#    TeleBot - UserBot
-#    Copyright (C) 2020 TeleBot
+#    The TufaanBot
+#    Copyright (C) 2020 AKHIL-SI
 
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as published by
@@ -14,23 +14,24 @@
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-# (c) @xditya
+# (c) @AKHIL-SI
+# don't cut this line
 
 import re
-from telebot.plugins.mybot import *
+from userbot.plugins.mybot import *
 from telethon import events, Button
 import heroku3
 import asyncio
 import os
 import requests
-from telebot.plugins.mybot.sql.blacklist_sql import all_bl_users
-from telebot.plugins import TELE_NAME
-from telebot.plugins.mybot.sql.userbase_sql import add_to_userbase, present_in_userbase, full_userbase
+from userbot.plugins.mybot.sql.blacklist_sql import all_bl_users
+from userbot.plugins import TUFAAN_NAME
+from userbot.plugins.mybot.sql.userbase_sql import add_to_userbase, present_in_userbase, full_userbase
 from datetime import datetime
 from telethon import events
-from telebot.telebotConfig import Var, Config
+from userbot.exampleconfig import Var, Config
 from telegraph import Telegraph, upload_file
-from telebot import CUSTOM_PMPERMIT
+from userbot import CUSTOM_PMPERMIT
 
 ##################--CONSTANTS--##################
 LOAD_MYBOT = Var.LOAD_MYBOT
@@ -85,9 +86,9 @@ async def start_all(event):
                                   caption=startotherena,
                                   buttons=[
                                       [Button.url(
-                                          "TeleBot", url="https://github.com/xditya/TeleBot")],
+                                          "TUFAANBOT", url="https://github.com/AKHIL-SI/TheTufaanBot")],
                                       [Button.inline(
-                                          "Whats this?", data="telebot")]
+                                          "Whats this?", data="TufaanBot")]
                                   ]
                                   )
         else:
@@ -95,9 +96,9 @@ async def start_all(event):
                                      startotherena,
                                      buttons=[
                                          [Button.url(
-                                             "TeleBot", url="https://github.com/xditya/TeleBot")],
+                                             "TUFAANBOT", url="https://github.com/AKHIL-SI/TheTufaanBot")],
                                          [Button.inline(
-                                             "Whats this?", data="telebot")]
+                                             "Whats this?", data="TufaanBot")]
                                      ]
                                      )
 
@@ -117,7 +118,7 @@ async def owner(event):
                                  [Button.inline("Broadcast",
                                                 data="telebroad")],
                                  [Button.url("Support",
-                                             url="https://t.me/TeleBotSupport")]
+                                             url="https://t.me/TufaanBot_Support")]
                              ])
 
 
@@ -169,7 +170,7 @@ async def settings(event):
 async def settings(event):
     await event.delete()
     await tgbot.send_message(event.chat_id,
-                             f"This is the personal help bot of {TELE_NAME}. You can contact me using this bot if necessary, or if I missed out your PM.",
+                             f"This is the personal help bot of {TUFAAN_NAME}. You can contact me using this bot if necessary, or if I missed out your PM.",
                              buttons=[
                                      [Button.inline(
                                          "Deploy me for yourself", data="deployme")]
@@ -181,10 +182,9 @@ async def settings(event):
 async def settings(event):
     await event.edit("Browse through the available options:",
                      buttons=[
-                         [(Button.url("Repository", url="https://github.com/xditya/TeleBot")),
-                          (Button.url("Deploy", url="https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Fxditya%2FTeleBot%2F&template=https%3A%2F%2Fgithub.com%2Fxditya%2FTeleBot"))],
+                         [(Button.url("Repository", url="https://github.com/AKHIL-SI/TheTufaanBot")),
                          [Button.url("Support",
-                                     url="https://t.me/TeleBotSupport")]
+                                     url="https://t.me/TufaanBot_support")]
                      ])
 
 
@@ -285,7 +285,7 @@ async def bot(event):
             return
         xx = await tgbot.send_message(event.chat_id, "Changing your Bot Pic, please wait for a minute")
         heroku_var = app.config()
-        heroku_var[telebot] = f"{url}"
+        heroku_var[tufaanbot] = f"{url}"
         mssg = f"Successfully changed your bot pic. Please wait for a minute.\n"
         await xx.edit(mssg)
     else:
@@ -311,7 +311,7 @@ async def custom(event):
                 mssg = "`**HEROKU**:" "\nPlease setup your` **HEROKU_APP_NAME**"
                 return
             heroku_var = app.config()
-            heroku_var[telebot] = f"{themssg}"
+            heroku_var[tufaanbot] = f"{themssg}"
             mssg = "Changed the PMBot start message!!\n**Restarting now**, please give me a minute."
             await event.delete()
             await tgbot.send_message(event.chat_id, mssg)
@@ -330,7 +330,7 @@ async def enablee(event):
             mssg = "`**HEROKU**:" "\nPlease setup your` **HEROKU_APP_NAME**"
             return
         heroku_var = app.config()
-        heroku_var[telebot] = "True"
+        heroku_var[tufaanbot] = "True"
         mssg = "Successfully turned on PM Bot. Restarting now, please give me a minute."
         await event.delete()
         await tgbot.send_message(event.chat_id, mssg)
@@ -483,7 +483,7 @@ async def alv_pic(event):
             return
         xx = await tgbot.send_message(event.chat_id, "Changing your Alive Pic, please wait for a minute")
         heroku_var=app.config()
-        heroku_var[telebot]=f"{url}"
+        heroku_var[tufaanbot]=f"{url}"
         mssg=f"Successfully changed your alive pic. Please wait for a minute.\n"
         await xx.edit(mssg)
     else:
@@ -557,7 +557,7 @@ async def alv_pic(event):
             return
         xx = await tgbot.send_message(event.chat_id, "Changing your PMSecurity Pic, please wait for a minute")
         heroku_var=app.config()
-        heroku_var[telebot]=f"{url}"
+        heroku_var[tufaanbot]=f"{url}"
         mssg=f"Successfully changed your PMSecurity pic. Please wait for a minute.\n"
         await xx.edit(mssg)
     else:
