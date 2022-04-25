@@ -70,7 +70,7 @@ async def amireallyalive(alive):
         tufaan_caption += f"**✘ 𝗧𝘂𝗳𝗮𝗮𝗻 𝗩𝗲𝗿𝘀𝗶𝗼𝗻 :** `{tufaanversion}`\n"
         tufaan_caption += f"**✘ 𝗖𝗵𝗮𝗻𝗻𝗲𝗹:** `[TufaanBot](https://t.me/TheTufaanBot)\n`"
         tufaan_caption += f"**✘ 𝗖𝗿𝗲𝗮𝘁𝗼𝗿 :** [Akhil](https://t.meAkHiL_SI)\n",
-        tufaan_caption += f"** _[🔗 TUFAANBOT SOURCE 🔥](https://GitHub.com/AKHIL-SI/TheTufaanBot)\n
+        tufaan_caption += f"** _[🔗 TUFAANBOT SOURCE 🔥](https://github.com/AKHIL-SI/TheTufaanBot)\n
 
         await alive.client.send_file(
             alive.chat_id, TUFAAN_IMG, caption=TUFAAN_caption, reply_to=reply_to_id
