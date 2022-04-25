@@ -92,7 +92,7 @@ Fortunately there are no Mandatory vars for the UniBorg Support Config.
 I made this userbot as a learning curiousity 👀, TufaanBot is one of my favorite project.
 This userbot is written in Python and based on Telethon library.
 Also I have taken help for making some plugins from other userbot available in Telegram.
-Special thanks To TeleBot guide which helpede a lot
+Special thanks To TeleBot guide which helped me a lot
 Full respect to their respective owners... 
 If you found any bugs and problem or for any kind of support report in our support group. 
 
