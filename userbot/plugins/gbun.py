@@ -4,12 +4,12 @@ import asyncio
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import ChannelParticipantsAdmins
 
-from telebot import CMD_HELP
-from telebot.utils import admin_cmd
+from userbot import CMD_HELP
+from userbot.utils import admin_cmd
 
 
-@telebot.on(admin_cmd(pattern="gbun"))
-@telebot.on(sudo_cmd(pattern="gbun", allow_sudo=True))
+@userbot.on(admin_cmd(pattern="gbun"))
+@userbot.on(sudo_cmd(pattern="gbun", allow_sudo=True))
 async def gbun(event):
     if event.fwd_from:
         return
@@ -30,9 +30,9 @@ async def gbun(event):
         usname = replied_user.user.username
         idd = reply_message.sender_id
         # make myself invulnerable cuz why not xD
-        if idd == 719195224:
+        if idd == :
             await reply_message.reply(
-                "`Wait a second, This is my master!`\n**How dare you threaten to ban my master nigger!**\n\n__Your account has been hacked! 😏"
+                "`Wait a second, This is my creator!`\n**How dare you threaten to ban my creator nigga!**\n\n__Your account has been hacked! 😏"
             )
         else:
             jnl = (
