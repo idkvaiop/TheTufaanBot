@@ -1,10 +1,10 @@
 from telethon.tl.types import ChannelParticipantsAdmins
 from uniborg.util import admin_cmd
 
-from telebot import CMD_HELP
+from userbot import CMD_HELP
 
 
-@telebot.on(admin_cmd(pattern="gaali"))
+@userbot.on(admin_cmd(pattern="papa"))
 async def _(event):
     if event.fwd_from:
         return
@@ -21,4 +21,4 @@ async def _(event):
     await event.delete()
 
 
-CMD_HELP.update({"gaali": ".gaali\nUse - Long abuse, in hindi."})
+CMD_HELP.update({"papa": ". papa\nUse - Long abuse, in hindi."})
