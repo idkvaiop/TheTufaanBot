@@ -1,5 +1,5 @@
-#    TeleBot - UserBot
-#    Copyright (C) 2020 TeleBot
+#    The TufaanBot
+#    Copyright (C) 2022 AKHIL-SI
 
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as published by
@@ -14,15 +14,15 @@
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-from telebot.plugins import OWNER_ID, TELE_NAME
+from tufaanbot.plugins import OWNER_ID, TELE_NAME
 import time
 from datetime import datetime
-from telebot.telebotConfig import Var
+from tufaanbot.exampleconfig import Var
 
 # start-other disabled
 startotherdis = """
 Hi there. I am {}'s bot. Nice to see you here.
-""".format(TELE_NAME)
+""".format(TUFAAN_NAME)
 
 # start-other enabled
 if Var.PMBOT_START_MSSG is None:
