@@ -1,9 +1,9 @@
 import time
 
-from userbot import StartTime, mafiaversion
-from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
+from userbot import StartTime, tufaanversion
+from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from telethon import events, version
-from userbot.Config import Config
+from userbot.exampleconfig import Config
 from . import *
 
 async def reply_id(event):
@@ -15,9 +15,9 @@ async def reply_id(event):
     return reply_to_id
 
 
-DEFAULTUSER = ALIVE_NAME or "Mafia User"
-MAFIA_IMG = Config.ALIVE_PIC
-CUSTOM_ALIVE_TEXT = Config.ALIVE_MSG or "𝕃𝕖𝕘𝕖𝕟𝕕𝕒𝕣𝕪_𝔸𝔽_𝕄𝕒𝕗𝕚𝕒𝔹𝕠𝕥"
+DEFAULTUSER = ALIVE_NAME or "TUFAAN USER"
+TUFAAN_IMG = Config.ALIVE_PIC
+CUSTOM_ALIVE_TEXT = Config.ALIVE_MSG or " #ɬųʄąąŋ_ơŋ_ʄıཞɛ 🔥⚡"
 
 USERID = bot.uid
 
@@ -55,33 +55,38 @@ def get_readable_time(seconds: int) -> str:
 uptime = get_readable_time((time.time() - StartTime))
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="mafia$"))
+@bot.on(admin_cmd(outgoing=True, pattern="tufaan$"))
 @bot.on(sudo_cmd(pattern="mafia$", allow_sudo=True))
 async def amireallyalive(alive):
     if alive.fwd_from:
         return
     reply_to_id = await reply_id(alive)
 
-    if MAFIA_IMG:
-        mafia_caption = f"**{CUSTOM_ALIVE_TEXT}**\n\n"
-        mafia_caption += f"≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈\n"
-        mafia_caption += f"__**𝔹𝕆𝕋 𝕊𝕋𝔸𝕋𝕌𝕊**__\n\n"
-        mafia_caption += f"**★ 𝕋𝕖𝕝𝕖𝕥𝕙𝕠𝕟 𝕧𝕖𝕣𝕤𝕚𝕠𝕟 :** `{version.__version__}`\n"
-        mafia_caption += f"**★ 𝕄𝔸𝔽𝕀𝔸𝔹𝕆𝕋 :**`{mafiaversion}`\n"
-        mafia_caption += f"**★ 𝕌𝕡𝕥𝕚𝕞𝕖 :** `{uptime}\n`"
-        mafia_caption += f"**★ 𝕄𝕒𝕤𝕥𝕖𝕣 :** {mention}\n"
+    if TUFAAN_IMG:
+        tufaan_caption = f"**🔥 TυϝααɳBσƚ Iʂ Oɳʅιɳҽ 🔥**\n\n"
+        
+        tufaan_caption += f"**✘ 𝗠𝗮𝘀𝘁𝗲𝗿 : **{mention}\n\n\n"
+        tufaan_caption += f"**✘ 𝗧𝗲𝗹𝗲𝘁𝗵𝗼𝗻 𝗩𝗲𝗿𝘀𝗶𝗼𝗻 :** `{version.__version__}`\n"
+        tufaan_caption += f"**✘ 𝗧𝘂𝗳𝗮𝗮𝗻 𝗩𝗲𝗿𝘀𝗶𝗼𝗻 :** `{tufaanversion}`\n"
+        tufaan_caption += f"**✘ 𝗖𝗵𝗮𝗻𝗻𝗲𝗹:** `[TufaanBot](https://t.me/TheTufaanBot)\n`"
+        tufaan_caption += f"**✘ 𝗖𝗿𝗲𝗮𝘁𝗼𝗿 :** [Akhil](https://t.meAkHiL_SI)\n",
+        tufaan_caption += f"**
+                             ___[🔗 TUFAANBOT SOURCE 🔥](https://GitHub.com/AKH-SI/TheTufaanBot)\n
+
         await alive.client.send_file(
-            alive.chat_id, MAFIA_IMG, caption=mafia_caption, reply_to=reply_to_id
+            alive.chat_id, TUFAAN_IMG, caption=TUFAAN_caption, reply_to=reply_to_id
         )
         await alive.delete()
     else:
         await edit_or_reply(
             alive,
-            f"**{CUSTOM_ALIVE_TEXT}**\n\n"
-            f"≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈ \n"
-            f"__**𝔹𝕆𝕋 𝕊𝕋𝔸𝕋𝕌𝕊**__\n\n"
-            f"**★ 𝕋𝕖𝕝𝕖𝕥𝕙𝕠𝕟 𝕧𝕖𝕣𝕤𝕚𝕠𝕟 :** `{version.__version__}`\n"
-            f"**★ 𝕄𝔸𝔽𝕀𝔸𝔹𝕆𝕋 :** `{mafiaversion}`\n"
-            f"**★ 𝕌𝕡𝕥𝕚𝕞𝕖 :** `{uptime}\n`"
-            f"**★ 𝕄𝕒𝕤𝕥𝕖𝕣 :** {mention}\n",
-        )
+            f"**🔥 TυϝααɳBσƚ Iʂ Oɳʅιɳҽ 🔥 **\n\n"
+            
+            f"**✘ 𝗠𝗮𝘀𝘁𝗲𝗿 : **{mention}\n\n"
+            f"**✘ 𝗧𝗲𝗹𝗲𝘁𝗵𝗼𝗻 𝗩𝗲𝗿𝘀𝗶𝗼𝗻 :** `{version.__version__}`\n"
+            f"**✘ 𝗧𝘂𝗳𝗮𝗮𝗻 𝗩𝗲𝗿𝘀𝗶𝗼𝗻 :** `{tufaanversion}`\n"
+            f"**✘ 𝗖𝗵𝗮𝗻𝗻𝗲𝗹:** `[TufaanBot](https://t.me/TheTufaanBot)\n`"
+            f"**✘ 𝗖𝗿𝗲𝗮𝘁𝗼𝗿 :** [Akhil](https://t.meAkHiL_SI)\n",
+            f"** 
+                 __[🔗 TUFAANBOT SOURCE 🔥](https://github.com/AKHIL-SI/TheTufaanBot)\n
+)
