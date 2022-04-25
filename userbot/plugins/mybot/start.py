@@ -141,10 +141,10 @@ async def logs(event):
         event.chat_id,
         "logs.txt",
         reply_to=event.id,
-        caption="**Heroku** TeleBot Logs",
+        caption="**Heroku** Tufaan Logs",
         buttons=[
             [Button.url("View Online", f"{url}")],
-            [Button.url("Crashed?", "t.me/TeleBotHelpChat")]
+            [Button.url("HELP?", "t.me/TufaanBot_support")]
         ])
     await asyncio.sleep(5)
     return os.remove('logs.txt')
