@@ -1,5 +1,5 @@
 try:
-    from telebot.plugins.sql_helper import SESSION, BASE
+    from userbot.plugins.jaanalawde import SESSION, BASE
 except ImportError:
     raise Exception("Hello!")
 
