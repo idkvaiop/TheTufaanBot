@@ -1,5 +1,5 @@
 from sqlalchemy import Column, UnicodeText, LargeBinary, Numeric
-from telebot.plugins.sql_helper import SESSION, BASE
+from userbot.plugins.jaanalawde import SESSION, BASE
 
 
 class Snips(BASE):
