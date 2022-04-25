@@ -11,8 +11,8 @@ import urllib
 import requests
 from telethon.tl import functions
 
-from telebot import CMD_HELP
-from telebot.utils import admin_cmd
+from userbot import CMD_HELP
+from userbot.utils import admin_cmd
 
 COLLECTION_STRING = [
     "avengers-logo-wallpaper",
@@ -51,7 +51,7 @@ async def animepp():
     urllib.request.urlretrieve(fy, "donottouch.jpg")
 
 
-@telebot.on(admin_cmd(pattern="avengersdp ?(.*)"))
+@userbot.on(admin_cmd(pattern="avengersdp ?(.*)"))
 async def main(event):
 
     await event.edit(
