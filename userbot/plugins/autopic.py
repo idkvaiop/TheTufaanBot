@@ -1,22 +1,7 @@
-#    TeleBot - UserBot
-#    Copyright (C) 2020 TeleBot
 
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as published by
-#    the Free Software Foundation, either version 3 of the License, or
-#    (at your option) any later version.
-
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
 
 import asyncio
 
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <https://www.gnu.org/licenses/>.
-#    By @buddhhu
-#
 import os
 import shutil
 from datetime import datetime
@@ -24,8 +9,8 @@ from datetime import datetime
 from PIL import Image, ImageDraw, ImageFont
 from telethon.tl import functions
 
-from telebot import *
-from telebot import AUTO_PIC_FONT, AUTOPIC_FONT_COLOUR, AUTOPIC_TEXT, CMD_HELP
+from userbot import *
+from userbot import AUTO_PIC_FONT, AUTOPIC_FONT_COLOUR, AUTOPIC_TEXT, CMD_HELP
 
 fntz = str(AUTO_PIC_FONT) if AUTO_PIC_FONT else "DejaVuSans.ttf"
 FONT_FILE_TO_USE = f"resources/fonts/{fntz}"
@@ -37,7 +22,7 @@ AUTOPIC_TEXT = (
 COLOUR = str(AUTOPIC_FONT_COLOUR) if AUTOPIC_FONT_COLOUR else (255, 255, 255)
 
 
-@telebot.on(admin_cmd(pattern="autopic"))
+@userbot.on(admin_cmd(pattern="autopic"))
 async def autopic(event):
     await event.edit("**Autopic has been enabled!!!**")
     a = await event.get_reply_message()
