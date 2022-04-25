@@ -3,8 +3,8 @@
 import random
 import re
 
-from telebot import CMD_HELP, bot
-from telebot.utils import admin_cmd
+from userbot import CMD_HELP, bot
+from userbot.utils import admin_cmd
 
 EMOJI_PATTERN = re.compile(
     "["
@@ -28,8 +28,8 @@ def deEmojify(inputString: str) -> str:
     return re.sub(EMOJI_PATTERN, "", inputString)
 
 
-@telebot.on(admin_cmd(outgoing=True, pattern="waifu(?: |$)(.*)"))
-@telebot.on(sudo_cmd(pattern="waifu(?: |$)(.*)"))
+@userbot.on(admin_cmd(outgoing=True, pattern="waifu(?: |$)(.*)"))
+@userbot.on(sudo_cmd(pattern="waifu(?: |$)(.*)"))
 async def waifu(animu):
     # """Creates random anime sticker!"""
 
