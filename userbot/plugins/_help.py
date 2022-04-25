@@ -1,25 +1,9 @@
-#    TeleBot - UserBot
-#    Copyright (C) 2020 TeleBot
-
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as published by
-#    the Free Software Foundation, either version 3 of the License, or
-#    (at your option) any later version.
-
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
 import os
 
-from telebot import ALIVE_NAME, CMD_HELP, CMD_HNDLR, CMD_LIST
-from telebot.telebotConfig import Config
+from userbot import ALIVE_NAME, CMD_HELP, CMD_HNDLR, CMD_LIST
+from userbot.exampleconfig import Config
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "TeleBot User"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Тυƒααη"
 CMD_HNDLR = Config.CMD_HNDLR
 CUSTOM_HELP_EMOJI = os.environ.get("CUSTOM_HELP_EMOJI", "⚡")
 
@@ -60,18 +44,18 @@ async def cmd_list(event):
                 if input_str in CMD_HELP:
                     for i in CMD_HELP[input_str]:
                         string += i
-                    string += "\n\n**© @TeleBotSupport**"
+                    string += "\n\n**© @TufaanBot_Support**"
                     await event.edit(string)
                 else:
                     for i in CMD_LIST[input_str]:
                         string += "    " + i
                         string += "\n"
-                    string += "\n**© @TeleBotSupport**"
+                    string += "\n**© @TufaanBot_Support**"
                     await event.edit(string)
             else:
                 await event.edit(input_str + " is not a valid plugin!")
         else:
-            help_string = f"""`Userbot Helper for {DEFAULTUSER} to reveal all the commands of `**[TeleBot](https://xditya.gitbook.io/telebot/)**\n\n"""
+            help_string = f"""`Userbot Helper for {DEFAULTUSER} to reveal all the commands of `**TufaanBot**\n\n"""
             try:
                 results = await bot.inline_query(  # pylint:disable=E0602
                     tgbotusername, help_string
@@ -82,5 +66,5 @@ async def cmd_list(event):
                 await event.delete()
             except BaseException:
                 await event.edit(
-                    f"This bot has inline disabled. Please enable it to use `{CMD_HNDLR}help`.\nGet help from [here](t.me/TeleBotHelpChat)"
+                    f"This bot has inline disabled. Please enable it to use `{CMD_HNDLR}help`.\nGet help from [here](t.me/TufaanBot_Support)"
                 )
