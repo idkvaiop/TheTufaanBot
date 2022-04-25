@@ -1,24 +1,8 @@
-#    TeleBot - UserBot
-#    Copyright (C) 2020 TeleBot
-
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as published by
-#    the Free Software Foundation, either version 3 of the License, or
-#    (at your option) any later version.
-
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
 # Incoming message checker.
-from telebot.plugins.mybot.sql.users_sql import add_user_to_db
-from telebot.plugins.mybot.sql.blacklist_sql import check_is_black_list
+from userbot.plugins.mybot.sql.users_sql import add_user_to_db
+from userbot.plugins.mybot.sql.blacklist_sql import check_is_black_list
 from telethon import events
-from telebot.plugins import OWNER_ID
+from userbot.plugins import OWNER_ID
 
 # if incoming
 
