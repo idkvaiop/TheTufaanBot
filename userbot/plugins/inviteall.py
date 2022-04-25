@@ -4,6 +4,7 @@
 # keep credit if u wanna kang...
 # Now in MafiaBot
 # else u are a gay...no doubt in that....
+# ported by @AkHiL_SI now for TufaanBot
 
 # --------------------------------------------------------------------------------------------------------------------------------
 
@@ -17,7 +18,7 @@ from telethon.tl.functions.channels import GetFullChannelRequest
 from telethon.tl.functions.messages import GetFullChatRequest
 
 from userbot import CMD_HELP
-from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
+from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
 async def get_chatinfo(event):
@@ -76,13 +77,13 @@ async def get_users(event):
     h1m4n5hu0p = await get_chatinfo(event)
     chat = await event.get_chat()
     if event.is_private:
-        return await mafia.edit("`Sorry, Cant add users here`")
+        return await tufaan.edit("`Sorry, Cant add users here`")
     s = 0
     f = 0
     error = "None"
 
-    await mafia.edit("**TerminalStatus**\n\n`Collecting Users.......`")
-    async for user in event.client.iter_participants(h1m4n5hu0p.full_chat.id):
+    await mafia.edit("**[TerminalRunning](https://t.me/TheTufaanBot)**\n\n`FeTiChInG USERS...`")
+    async for user in event.client.iter_participants(userbot.full_chat.id):
         try:
             if error.startswith("Too"):
                 return await mafia.edit(
@@ -103,44 +104,8 @@ async def get_users(event):
     )
 
 
-@bot.on(admin_cmd(pattern="addmem ?(.*)"))
-@bot.on(sudo_cmd(pattern="addmem ?(.*)", allow_sudo=True))
-async def _(event):
-    if event.fwd_from:
-        return
-    to_add_users = event.pattern_match.group(1)
-    if event.is_private:
-        await edit_or_reply(event, "`.addmem` users to a chat, not to a Private Message")
-    else:
-        logger.info(to_add_users)
-        if not event.is_channel and event.is_group:
-            # https://lonamiwebs.github.io/Telethon/methods/messages/add_chat_user.html
-            for user_id in to_add_users.split(" "):
-                try:
-                    await borg(
-                        functions.messages.AddChatUserRequest(
-                            chat_id=event.chat_id, user_id=user_id, fwd_limit=1000000
-                        )
-                    )
-                except Exception as e:
-                    await event.reply(str(e))
-            await edit_or_reply(event, "Invited Successfully")
-        else:
-            # https://lonamiwebs.github.io/Telethon/methods/channels/invite_to_channel.html
-            for user_id in to_add_users.split(" "):
-                try:
-                    await borg(
-                        functions.channels.InviteToChannelRequest(
-                            channel=event.chat_id, users=[user_id]
-                        )
-                    )
-                except Exception as e:
-                    await event.reply(str(e))
-            await edit_or_reply(event, "Added user to the chat....")
 
 
 CmdHelp("invite").add_command(
-  "addmem", "<username/id>", "Adds the given user to the group"
-).add_command(
   "inviteall", "<group username>", "Scraps user from the targeted group to your group. Basically Kidnapps user from one chat to another"
 ).add()
